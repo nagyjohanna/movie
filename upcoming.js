@@ -23,7 +23,7 @@ function show(data_upcoming) {
 
 	for (let r of data_upcoming.results) {
 	 upcoming += `
-		<div onclick="getMovie(${r.id});" class="movieee"><div class="img"><img src="http://image.tmdb.org/t/p/w185/${r.poster_path}"></div>
+		<div onclick="getMovie(${r.id});" class="movieee"><div class="img"><img loading="lazy" class="lazyload" src="http://image.tmdb.org/t/p/w185/${r.poster_path}"></div>
 		<div class="tilte">${r.original_title} </div></div>`;
 }
 
@@ -65,10 +65,10 @@ function getMovie(id){
 		<div class="img"><img src="http://image.tmdb.org/t/p/w185/${data2.poster_path}"></div>
 		<div class="movie_title">${data2.title}</div>
 		<div class="movie_tagline">${data2.tagline}</div>
-		<div class="movie_releasedate"> ${data2.runtime} mins | ${data2.status} | ${data2.release_date}</div>
+		<div class="movie_releasedate"><i class="fal fa-history"></i> ${data2.runtime} mins | <i class="far fa-question-circle"></i> ${data2.status} | <i class="fal fa-calendar"></i> ${data2.release_date}</div>
 		<div class="movie_overview">${data2.overview}</div>
-		<div class="movie_link"><a href="${data2.homepage}">Movie home page</a></div>
-		<div class="movie_releasedate">Vote avarage: ${data2.vote_average} (${data2.vote_count}) | Popularity:  ${data2.popularity}</div>
+		<div class="movie_releasedate"><b>Vote avarage:</b> ${data2.vote_average} <i class="fas fa-star"></i> (${data2.vote_count}) | <b>Popularity:</b>  ${data2.popularity} | <b>Original language:</b> ${data2.original_language}</div>
+			<div class="movie_link"><a href="${data2.homepage}">Movie home page</a></div>
 		</div>`;
 
 
