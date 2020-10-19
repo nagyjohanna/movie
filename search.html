@@ -5,39 +5,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="search.js"></script>
-    <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <title>Filmek</title>
+  <title>Search | Movies</title>
 
 </head>
 
-<body>
+<body class="search">
 
   <div class="header">
-
-    <div class="img_banner">
-  <img src="img/banner.png">
-    </div>
-        <div class="menu">
+      <div class="img_banner">
+          <img src="banner.png">
+      </div>
+      <div class="menu">
           <a href="home.html"><span>Home</span></a>
           <a href="movie.html"><span>Movies</span></a>
-          <a href="search.html" target=_blank><span class="search">Search</span></a>
+          <a href="search.html"><span class="search">Search</span></a>
         </div>
-
   </div>
+
+
 <div class="search_page">
 <div class="search_box">
-  <span class="search_text">Millions of movies, TV shows to discover. Explore now.</span>
-   <div id="search-box">
-     <input type="text" placeholder="search" id="search_movie">
-     <div class="button" onclick="searchURL();"> SEARCH </div>
+    <span class="search_text">Millions of movies, TV shows to discover. Explore now.</span>
+    <div id="search-box">
+        <input type="text" placeholder="search" id="search_movie">
+        <div class="button" onclick="searchURL();"> SEARCH </div>
    </div>
-   </div>
+</div>
 
-<div id="filmek-results"></div>
-<div id="movie_data2"></div>
+   <div id="button_back"><input type="button" value="Back" onclick="goBack()"></div>
+
+   <div id="filmek-results"></div>
+   <div id="movie_data2"></div>
 
 </div>
+
 </body>
 
 </html>
