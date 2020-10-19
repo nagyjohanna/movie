@@ -39,6 +39,7 @@ const api_url = link_search;
 	function show(data) {
 
 	let tab='';
+	let empty='';
 
 
 
@@ -53,7 +54,10 @@ const api_url = link_search;
 
 
 		document.getElementById("filmek-results").innerHTML = tab;
+		document.getElementById("button_back").innerHTML = empty;
 	}
+
+
 
 }
 
@@ -103,23 +107,18 @@ const api_url2 = link;
 	<div class="img"><img src="http://image.tmdb.org/t/p/w185/${data2.poster_path}"></div>
 	<div class="movie_title">${data2.title}</div>
 	<div class="movie_tagline">${data2.tagline}</div>
-	<div class="movie_releasedate"> ${data2.runtime} mins | ${data2.status} | ${data2.release_date}</div>
+	<div class="movie_releasedate"><i class="fal fa-history"></i> ${data2.runtime} mins | <i class="far fa-question-circle"></i> ${data2.status} | <i class="fal fa-calendar"></i> ${data2.release_date}</div>
 	<div class="movie_overview">${data2.overview}</div>
-	<div class="movie_link"><a href="${data2.homepage}">Movie home page link</a></div>
-	<div class="movie_releasedate">Vote avarage: ${data2.vote_average} | Popularity:  ${data2.popularity}</div>
+	<div class="movie_releasedate"><b>Vote avarage:</b> ${data2.vote_average} <i class="fas fa-star"></i> (${data2.vote_count}) | <b>Popularity:</b>  ${data2.popularity} | <b>Original language:</b> ${data2.original_language}</div>
+		<div class="movie_link"><a href="${data2.homepage}">Movie home page</a></div>
 	</div>`;
 
 
-tab3 += `<div class="genres">Genres: `;
-for (let r of data2.genres) {
-	tab3 += r.name + `, `;
-}
-tab3 += `</div>`;
-
-
-
-
-
+	tab3 += `<div class="genres">`;
+	for (let r of data2.genres) {
+		tab3 += r.name + ` | `;
+	}
+	tab3 += `</div>`;
 
 
 
@@ -127,6 +126,12 @@ tab3 += `</div>`;
 		document.getElementById("movie_data2").innerHTML = tab2 + tab3;
 		document.getElementById("filmek-results").innerHTML = empty;
 
+
 	}
 
+}
+
+
+function goBack() {
+  window.history.back()
 }
