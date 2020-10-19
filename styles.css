@@ -3,16 +3,12 @@
 float: left;
 width: calc((100% - 110px) / 5);
 margin-bottom: 30px;
-/* border: 1px solid red; */
 margin-right: 20px;
 text-align: center;
 height:320px;
 }
 
-div#movie_data {
-    /* background: red; */
-    /* display: none; */
-}
+
 
 .img_banner {
     width: 100%;
@@ -81,7 +77,12 @@ input#search_movie {
     width: 300px;
     border-radius: 15px;
     outline:none;
+    padding-left: 10px;
 }
+
+.button:hover {
+    background: #a92521;
+  }
 
 .search_box {
     display: block;
@@ -89,7 +90,7 @@ input#search_movie {
     margin: auto;
     text-align: center;
     margin-top: 50px;
-    height: 200px;
+    height: 165px;
     margin-bottom: 30px;
 }
 
@@ -98,7 +99,8 @@ body {
 }
 
 span.search_text {
-    width: 100%;
+    width: calc(100% - 50px);
+    margin-left:50px;
     display: block;
     float: left;
     text-align: left;
@@ -115,7 +117,6 @@ span.search_text {
 
 input#search_movie::placeholder {
     color: #191523;
-    padding-left: 11px;
 }
 
 .button {
@@ -137,6 +138,7 @@ div#movie_data .img {
     width: 17%;
     float: left;
     margin-left: 50px;
+    height: 375px;
 }
 
 div#movie_data {
@@ -149,6 +151,7 @@ div#movie_data2 .img {
     width: 17%;
     float: left;
     margin-left: 50px;
+      height: 375px;
 }
 
 div#movie_data2 {
@@ -157,15 +160,52 @@ div#movie_data2 {
 }
 
 .movie_tagline {
-    color: #a62122;
+    color: #2a1327e0;
     font-size: 20px;
     font-style: italic;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+input[type="button"] {
+    background: #2a1325;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: #fff;
+    margin-left: 50px;
+    cursor: pointer;
+    outline:none;
+}
+
+input[type="button"]:hover {
+    transform: scale(1.1);
+    outline:none;
 }
 
 .movie_title {
-    color: #2a1326;
+    background: #2a1326;
     font-size: 30px;
     font-weight: bold;
+    color: #fff;
+    padding-bottom: 14px;
+    padding-top:50px;
+}
+
+.movie div#movie_data .img {
+    width: 17%;
+    float: left;
+    margin-left: 50px;
+    height: 375px;
+    margin-top: 55px;
+}
+
+.search div#movie_data2 .img {
+    width: 17%;
+    float: left;
+    margin-left: 50px;
+    height: 375px;
+    margin-top: 55px;
 }
 
 .movie_overview {
@@ -184,4 +224,13 @@ div#movie_data2 {
 
 .movie_releasedate {
     margin-top: 10px;
+}
+
+i {
+    font-family: 'FontAwesome';
+    font-style: normal;
+}
+
+i.fas.fa-star {
+    color: #e0e008;
 }
